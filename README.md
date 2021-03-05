@@ -18,6 +18,6 @@ Step 3: Click the file inside the folder named as **"start.bat"**
 a) node-name = "Type Your Node Name Here"<br>
 b) declared-address = "127.0.0.1:6860" #declared ip address of your node<br>
 c) seed = "Enter_Your_Encoded_Backup_Seed_Here_From_KSS_Wallet" <br>
-d) password = "Enter any Random Password Here to protect your wallet" #Etner the Strong password to protect your Wallet<br>
+d) password = "Enter any Random Password Here to protect your wallet" #Enter the 15 words any Strong password to protect your Wallet<br>
 e) save the mainnet.conf file after making above changes <br>
 f) run the file start.bat and node must start downloading the block.<br>
