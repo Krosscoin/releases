@@ -1,0 +1,1 @@
+java -jar kss-all-1.2.17.jar mainnet.conf
