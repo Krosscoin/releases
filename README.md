@@ -4,7 +4,7 @@
 2. Minimum 2 cores
 3. 2GB RAM
 4. 30GB SSD
-2. Java version 8 and above must be installed in your VPS. If your windows VPS doesn't have it download it from [Here](https://www.java.com/en/download/)
+2. Java version 8 and above must be installed in your VPS. If your windows VPS doesn't have it download it from [Here](https://www.java.com/en/download/) and set java in your [windows environment](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html).
 ## Installing and configuring a Krosschain Platform full node on Windows VPS<br>
  Step 1: Click Here and [Download](https://github.com/Krosscoin/releases/archive/master.zip) the Zip Folder and Unzip it.<br>
  Step 2: Set the configuration file of your node in **mainnet.conf**<br>
