@@ -22,7 +22,7 @@ d) password = "Enter any Random Password Here to protect your wallet" #Enter the
 e) save the mainnet.conf file after making above changes <br>
 f) run the file start.bat and node must start downloading the block.<br>
 
-# Installing and configuring a Krosschain Platform full node on Linux Server
+## Installing and configuring a Krosschain Platform full node on Linux Server
 ## System and OS Requirements:<br>
 1. Ubuntu 18 VPS in case of Linux<br>
 2. Minimum 2 cores<br>
