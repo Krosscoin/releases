@@ -21,3 +21,63 @@ c) seed = "Enter_Your_Encoded_Backup_Seed_Here_From_KSS_Wallet" <br>
 d) password = "Enter any Random Password Here to protect your wallet" #Enter the 15 words any Strong password to protect your Wallet<br>
 e) save the mainnet.conf file after making above changes <br>
 f) run the file start.bat and node must start downloading the block.<br>
+
+# Run Node on Linux Server
+## System and OS Requirements:<br>
+1. Ubuntu 18 VPS in case of Linux<br>
+2. Minimum 2 cores<br>
+3. 2GB RAM<br>
+4. 30GB SSD<br>
+
+All commands are issued as root. If you do not use your root account most commands would probably require 'sudo' to work. Eg. "sudo apt update"<br>
+
+**Step 1:** login into Linux server with the root account<br>
+
+**Step 2:** Type Below Command<br>
+>apt update<br>
+ 
+**Step 3:** Install Java development kit with following commands<br>
+> sudo apt install openjdk-8-jre <br>
+> sudo apt install openjdk-8-jdk <br>
+> sudo apt update <br>
+
+Once its installed check if you have the latest version.
+> java -version
+
+**Step 4:** Download the latest fullnode from Krosschain repository.<br>
+Link: [Latest Release](https://github.com/Krosscoin/releases/archive/master.zip)
+
+Command to download on Linux Server<br>
+> sudo wget https://github.com/Krosscoin/releases/archive/master.zip<br>
+
+Type below command to install Unzip in Linux server and make the required changes in mainnet.conf<br>
+> sudo apt-get install unzip<br>
+> unzip master.zip<br>
+> cd releases-master<br>
+> screen<br>
+> sudo vi mainnet.conf<br>
+
+Press **Insert button** to enable typing and vi editor<br>
+
+**Note:** if something went wrong during typing or don't wanna to save it just press escape and type **:qa!** to exit and use last command **sudo vi mainnet.conf** again)
+
+**Step 5:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) in your Windows PC or Laptop and save your Encoded backup seed to use in mainnet.conf
+
+**Step 6:** Change the below lines in mainnet.conf and save it<br>
+a) node-name = "Type Your Node Name Here"<br>
+b) declared-address = "127.0.0.1:6860" #declared ip address of your node<br>
+c) seed = "Enter_Your_Encoded_Backup_Seed_Here_From_KSS_Wallet"<br>
+d) password = "Enter any Random Password Here to protect your wallet" #Enter the 15 words any Strong password to protect your Wallet<br>
+e) use below command to save or write the channges in mainnet.conf file <br>
+
+Press Escape button and type below command and press enter 
+>:w
+
+Start the node with following command:
+>java -jar kss-all-1.2.17.jar mainnet.conf
+
+Node will start downloading and synching the blockchain. If any error during starting of node means something wrong input in mainnet.conf
+
+When blocks are synched then you can deattach the screen by pressing **CTRL+d** and close the window. Node has been set to run in background process of Linux VPS.
+
+Good Luck and Enjoy the Mining and Leasing of KSS.
