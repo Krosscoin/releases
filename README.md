@@ -74,7 +74,7 @@ Press Escape button and type below command and press enter
 >:w
 
 Start the node with following command:
->java -jar kss-all-1.2.17.jar mainnet.conf
+>java -jar kss-all-1.3.xx.jar mainnet.conf [Where xx denotes your downloaded version]
 
 Node will start downloading and synching the blockchain. If any error during starting of node means something wrong input in mainnet.conf
 
