@@ -9,7 +9,7 @@
  Step 1: Click Here and [Download](https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar) the node jar file.<br>
  Step 2: Download the [configuration file](https://github.com/Krosscoin/releases/blob/master/mainnet.conf) of your node in **mainnet.conf**<br>
  Step 3: Download the [bat file](https://github.com/Krosscoin/releases/blob/master/start.bat) of your node.<br>
- Step 4: .jar,.bat,.conf files should be in same folder, Click the **"start.bat"** to start the node.<br>
+ Step 4: [kss-all-xx.xx.xx.jar , start.bat , mainnet.conf ]  all 3 files should be in same folder, Click the **"start.bat"** to start the node.<br>
 
 ## How to run Node the KSS Node
 **Step 1:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) and set KSS wallet as custom chain to generate a blank KSS account. (without funds)  
