@@ -7,8 +7,9 @@
 2. Java version 8 and above must be installed in your VPS. If your windows VPS doesn't have it download it from [Here](https://www.java.com/en/download/) and set java in your [windows environment](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html).
 ## Installing and configuring a Krosschain Platform full node on Windows VPS<br>
  Step 1: Click Here and [Download](https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar) the node jar file.<br>
- Step 2: Download the [configuration file](https://github.com/Krosscoin/releases/archive/refs/heads/master.zip) of your node in **mainnet.conf**<br>
-Step 3: Click the file inside the folder named as **"start.bat"**
+ Step 2: Download the [configuration file](https://github.com/Krosscoin/releases/blob/master/mainnet.conf) of your node in **mainnet.conf**<br>
+ Step 3: Download the [bat file](https://github.com/Krosscoin/releases/blob/master/start.bat) of your node.
+ Step 4: Click the file inside the folder named as **"start.bat"**
 
 ## How to run Node the KSS Node
 **Step 1:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) and set KSS wallet as custom chain to generate a blank KSS account. (without funds)  
