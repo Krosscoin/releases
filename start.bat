@@ -1,1 +1,1 @@
-java -jar kss-all-1.3.13.jar mainnet.conf
+java -jar kss-all-1.3.15.jar mainnet.conf
