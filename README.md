@@ -8,7 +8,7 @@
 ## Installing and configuring a Krosschain Platform full node on Windows VPS<br>
  Step 1: Click Here and [Download](https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar) the node jar file.<br>
  Step 2: Download the [configuration file](https://github.com/Krosscoin/releases/blob/master/mainnet.conf) of your node in **mainnet.conf**<br>
- Step 3: Download the [bat file](https://github.com/Krosscoin/releases/blob/master/start.bat) of your node.
+ Step 3: Download the [bat file](https://github.com/Krosscoin/releases/blob/master/start.bat) of your node.<br>
  Step 4: Click the file inside the folder named as **"start.bat"**
 
 ## How to run Node the KSS Node
