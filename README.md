@@ -45,16 +45,32 @@ All commands are issued as root. If you do not use your root account most comman
 Once its installed check if you have the latest version.
 > java -version
 
-**Step 4:** Download the latest fullnode from Krosschain repository.<br>
-Link: ([https://github.com/Krosscoin/releases/archive/master.zip](https://github.com/Krosscoin/releases/archive/refs/heads/master.zip))
+**Step 4:** Download the latest node version from Krosschain releases repository.<br>
+> sudo wget https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar<br>
 
 Command to download on Linux Server<br>
 > sudo wget https://github.com/Krosscoin/releases/archive/master.zip<br>
 
-Type below command to install Unzip in Linux server and make the required changes in mainnet.conf<br>
+Type below command to install Unzip in Linux server and make the required changes in mainnet.conf [Step5 - Step6] <br>
 > sudo apt-get install unzip<br>
-> unzip master.zip<br>
-> cd releases-master<br>
+> sudo unzip master.zip<br>
+> sudo pwd<br>
+
+**You will see the path of current folder, use this directory path in next step**<br>
+
+> sudo mv kss-all-1.3.15.jar <path_from_previous_step>/releases-master/kss-all-1.3.15.jar<br>
+
+**Below is an Example for above command where <code>/home/vkadmin</code> is the path of current folder generated from command <code>sudo pwd</code>:** 
+> sudo mv kss-all-1.3.15.jar /home/vkadmin/releases-master/kss-all-1.3.15.jar <code>Don't paste this line as its just an example</code><br>
+
+> sudo cd releases-master<br>
+> sudo dir<br>
+
+**Note:** <code>sudo dir</code> Command works as a Check point to ensure releases-master folder has following files:<br>
+<code>README.md , kss-all-1.3.15.jar, mainnet.conf , start.bat</code><br>
+
+**Incase any of above file or kss-all-1.x.xx.jar is missing from current folder then something wrong in last 2 steps**<br>
+
 > screen<br>
 > sudo vi mainnet.conf<br>
 
@@ -65,11 +81,11 @@ Press **Insert button** to enable typing and vi editor<br>
 **Step 5:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) in your Windows PC or Laptop and save your Encoded backup seed to use in mainnet.conf
 
 **Step 6:** Change the below lines in mainnet.conf and save it<br>
-a) node-name = "Type Your Node Name Here"<br>
-b) declared-address = "127.0.0.1:6860" #declared ip address of your node<br>
-c) seed = "Enter_Your_Encoded_Backup_Seed_Here_From_KSS_Wallet"<br>
-d) password = "Enter any Random Password Here to protect your wallet" #Enter the 15 words any Strong password to protect your Wallet<br>
-e) use below command to save or write the channges in mainnet.conf file <br>
+a) <code>node-name = "Type Your Node Name Here"</code><br>
+b) <code>declared-address = "127.0.0.1:6860" #declared ip address of your node</code><br>
+c) <code>seed = "Enter_Your_Encoded_Backup_Seed_Here_From_KSS_Wallet"</code><br>
+d) <code>password = "Enter any Random Password Here to protect your wallet" #Enter the 15 words any Strong password to protect your Wallet</code><br>
+e) <code>Use below command to save or write the channges in mainnet.conf file</code><br>
 
 Press Escape button and type below command and press enter 
 >:w
