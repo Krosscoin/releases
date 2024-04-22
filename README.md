@@ -56,13 +56,8 @@ Type below command to install Unzip in Linux server and make the required change
 > sudo unzip master.zip<br>
 > sudo pwd<br>
 
-**You will see the path of current folder, use this directory path in next step**<br>
 
-> sudo mv kss-all-1.3.15.jar <path_from_previous_step>/releases-master/kss-all-1.3.15.jar<br>
-
-**Below is an Example for above command where <code>/home/vkadmin</code> is the path of current folder generated from command <code>sudo pwd</code>:** 
-> sudo mv kss-all-1.3.15.jar /home/vkadmin/releases-master/kss-all-1.3.15.jar <code>Don't paste this line as its just an example</code><br>
-
+> sudo mv kss-all-1.3.15.jar /home/vkadmin/releases-master/kss-all-1.3.15.jar 
 > sudo cd releases-master<br>
 > sudo dir<br>
 
