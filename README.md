@@ -46,7 +46,7 @@ Once its installed check if you have the latest version.
 > java -version
 
 **Step 4:** Download the latest fullnode from Krosschain repository.<br>
-Link: [Latest Release](https://github.com/Krosscoin/releases/archive/master.zip)
+Link: [Latest Release]([https://github.com/Krosscoin/releases/archive/master.zip](https://github.com/Krosscoin/releases/archive/refs/heads/master.zip))
 
 Command to download on Linux Server<br>
 > sudo wget https://github.com/Krosscoin/releases/archive/master.zip<br>
