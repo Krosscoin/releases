@@ -35,7 +35,7 @@ All commands are issued as root. If you do not use your root account most comman
 **Step 1:** login into Linux server with the root account<br>
 
 **Step 2:** Type Below Command<br>
->apt update<br>
+> sudo apt update<br>
  
 **Step 3:** Install Java development kit with following commands<br>
 > sudo apt install openjdk-8-jre <br>
