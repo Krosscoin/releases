@@ -51,7 +51,7 @@ Once its installed check if you have the latest version.
 Command to download on Linux Server<br>
 > sudo wget https://github.com/Krosscoin/releases/archive/master.zip<br>
 
-Type below command to install Unzip in Linux server and make the required changes in mainnet.conf [Step5 - Step6] <br>
+Type below command to install Unzip in Linux server and make the required changes in mainnet.conf<br>
 > sudo apt-get install unzip<br>
 > sudo unzip master.zip<br>
 > sudo pwd<br>
