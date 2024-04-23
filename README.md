@@ -57,7 +57,7 @@ Type below command to install Unzip in Linux server and make the required change
 > sudo pwd<br>
 
 
-> sudo mv kss-all-1.3.15.jar /home/vkadmin/releases-master/kss-all-1.3.15.jar<br> 
+> sudo mv kss-all-1.3.15.jar /root/releases-master/kss-all-1.3.15.jar<br> 
 > sudo cd releases-master<br>
 > sudo dir<br>
 
