@@ -83,10 +83,10 @@ d) <code>password = "Enter any Random Password Here to protect your wallet" #Ent
 e) <code>Use below command to save or write the channges in mainnet.conf file</code><br>
 
 Press Escape button and type below command and press enter 
->:w
+>:wq
 
 Start the node with following command:
->java -jar kss-all-1.3.xx.jar mainnet.conf [Where xx denotes your downloaded version]
+>java -jar kss-all-1.3.15.jar mainnet.conf 
 
 Node will start downloading and synching the blockchain. If any error during starting of node means something wrong input in mainnet.conf
 
