@@ -11,6 +11,13 @@ then
     sudo apt-get -y install base58
 fi
 
+# Check if screen is installed
+if ! command -v screen &> /dev/null
+then
+    echo -e "${GREEN}screen is not installed. Installing screen...${RESET}"
+    sudo apt-get install -y screen
+fi
+
 # Check free RAM
 free_ram=$(free -m | awk '/^Mem:/{print $4}')
 if [ $free_ram -lt 1600 ]; then
@@ -34,8 +41,12 @@ fi
 # Check Java version
 java_version=$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')
 if [[ $java_version < "17" ]]; then
-    echo -e "${GREEN}Warning: Java version $java_version is less than 17.${RESET}"
-    exit 1
+    echo -e "${GREEN}Warning: Java version $java_version is less than 17.${RESET}. Installing Java Version 17 (openjdk-17-jre,openjdk-17-jdk).${RESET}"
+	sudo apt install openjdk-17-jre
+	sudo apt install openjdk-17-jdk
+	sudo apt update
+else
+	echo -e "${GREEN} Java version: $java_version is already Installed.${RESET}"
 fi
 
 # Check if jq is installed
@@ -43,6 +54,8 @@ if ! command -v jq &> /dev/null
 then
     echo -e "${GREEN}jq is not installed. Installing jq...${RESET}"
     sudo apt-get install-y jq
+else
+	echo -e "jq is already installed.${RESET}"
 fi
 
 # Check if unzip is installed
@@ -61,12 +74,14 @@ if ! command -v openssl &> /dev/null
 then
     echo -e "${GREEN}openssl is not installed. Installing openssl...${RESET}"
     sudo apt-get install -y openssl
+else
+	echo -e "${GREEN}openssl is already installed.${RESET}"
 fi
 
 # Download the latest Krosscoin release
 echo -e "${GREEN}Downloading the latest Krosscoin release...${RESET}"
 if [ -f master.zip ]; then
-    echo -e "${GREEN}Error: master.zip is already installed. Please remove it before running this script again.${RESET}"
+    echo -e "${GREEN}Error: master.zip is already installed. Please remove it before running this scriptagain.${RESET}"
     exit 1
 fi
 
@@ -81,7 +96,7 @@ if [[ $release_name == v1* ]]; then
 
     # Check if kss-all-${version}.jar is already installed
     if [ -f kss-all-${version}.jar ]; then
-        echo -e "${GREEN}Error: kss-all-${version}.jar is already installed. Please remove it before running this script again.${RESET}"
+        echo -e "${GREEN}Error:kss-all-${version}.jar is already installed. Please remove it before running this script again.${RESET}"
         exit 1
     fi
 
@@ -135,13 +150,43 @@ password_hash=$(openssl rand -hex 20 | sha1sum | awk '{print $1}')
 
 # Update password in mainnet.conf
 sudo sed -i "s/password = .*/password = \"$password_hash\"/g" mainnet.conf
-# Run dos2unix on mainnet.conf
-dos2unix mainnet.conf
 
-# Run sudo apt update
-echo -e "${GREEN}System has sufficient free RAM, disk space, Java version, jq, and Krosscoin version. Running sudoapt update...${RESET}"
-sudo apt update
-sudo apt install openjdk-17-jre
-sudo apt install openjdk-17-jdk
-sudo apt update
+# Run dos2unix on mainnet.conf
+sudo dos2unix mainnet.conf
+
+# Service name (Node Service Name)
+SERVICE_NAME="kss_node.service"
+
+# Service description (replace if needed)
+SERVICE_DESCRIPTION="Krosscoin Node Service"
+
+# Create the kss service file
+sudo chown -R $(whoami):$(whoami) /etc/systemd/system/
+sudo cat << EOF > /etc/systemd/system/${SERVICE_NAME}
+[Unit]
+Description=${SERVICE_DESCRIPTION}
+After=network.target
+
+[Service]
+User=$(whoami)
+WorkingDirectory=$(pwd)
+ExecStart=sudo java -jar kss-all-${version}.jar mainnet.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+echo -e "${GREEN}Created ${SERVICE_DESCRIPTION}: under Directory: /etc/systemd/system/ with a name ${SERVICE_NAME}...${RESET}"
+sleep 2
+echo -e "${GREEN}Staring ${SERVICE_DESCRIPTION} to reload deamon and starting node...${RESET}"
+sudo systemctl daemon-reload
+sleep 1
+sudo systemctl start kss_node.service
+sleep 2
+echo -e "${GREEN}Commands Lists:"
+echo -e "${GREEN}Command to Check node is running in background:${RESET}sudo journalctl --follow --unit kss_node.service --lines 100"
+echo -e "${GREEN}Command to Check running node status in background:${RESET}sudo systemctl status kss_node.service"
+echo -e "${GREEN}Command to Stop running node in background:${RESET}sudo systemctl stop kss_node.service"
+echo -e "${GREEN}Thanks for using KSS Node Services, Happy Mining...${RESET}"
 exit 0
