@@ -30,7 +30,26 @@ f) run the file start.bat and node must start downloading the block.<br>
 3. 2GB RAM<br>
 4. 30GB SSD<br>
 
-All commands are issued as root. If you do not use your root account most commands would probably require 'sudo' to work. Eg. "sudo apt update"<br>
+## Automatic Way to install node
+> sudo wget sudo wget https://raw.githubusercontent.com/Krosscoin/releases/master/node_automation.sh<br>
+> sudo chmod +x node_automation.sh<br> 
+> ./node_automation.sh<br>
+
+**Command to Check node is running in background:**
+> sudo journalctl --follow --unit kss_node.service --lines 100<br>
+
+**Command to Check running node status in background:**
+> sudo systemctl status kss_node.service<br>
+
+**Command to Stop running node in background:**
+> sudo systemctl stop kss_node.service<br>
+
+**Command to Delete All KSS node relevent data, Services, Files: (From root level access)**
+> sudo rm -rf /opt/kss/ releases-master node_automation.sh /etc/systemd/system/kss_node.service
+
+**Note:** All commands are issued as root. If you do not use your root account most commands would probably require 'sudo' to work. Eg. "sudo apt update"<br>
+
+## Manual Way to install node
 
 **Step 1:** login into Linux server with the root account<br>
 
