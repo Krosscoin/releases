@@ -31,7 +31,7 @@ f) run the file start.bat and node must start downloading the block.<br>
 4. 30GB SSD<br>
 
 ## Automatic Way to install node
-> sudo wget sudo wget https://raw.githubusercontent.com/Krosscoin/releases/master/node_automation.sh<br>
+> sudo wget https://raw.githubusercontent.com/Krosscoin/releases/master/node_automation.sh<br>
 > sudo chmod +x node_automation.sh<br> 
 > ./node_automation.sh<br>
 
