@@ -70,7 +70,7 @@ Download the latest node version from Krosschain releases repository.<br>
 > sudo wget https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar<br>
 
 Command to download on Linux Server<br>
-> sudo wget https://github.com/Krosscoin/releases/archive/master.zip<br>
+> wget https://github.com/Krosscoin/releases/archive/refs/heads/master.zip<br>
 
 Type below command to install Unzip in Linux server and make the required changes in mainnet.conf<br>
 > sudo apt-get install unzip<br>
