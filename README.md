@@ -64,7 +64,9 @@ f) run the file start.bat and node must start downloading the block.<br>
 Once its installed check if you have the latest version.
 > java -version
 
-**Step 4:** Download the latest node version from Krosschain releases repository.<br>
+**Step 4:** create a screen by entering: sudo screen -S kss_node
+
+Download the latest node version from Krosschain releases repository.<br>
 > sudo wget https://github.com/Krosscoin/releases/releases/download/v1.3.15/kss-all-1.3.15.jar<br>
 
 Command to download on Linux Server<br>
