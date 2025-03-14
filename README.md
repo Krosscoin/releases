@@ -78,7 +78,9 @@ Type below command to install Unzip in Linux server and make the required change
 > sudo pwd<br>
 
 
-> sudo mv kss-all-1.3.15.jar /root/releases-master/kss-all-1.3.15.jar<br> 
+> sudo mv kss-all-1.3.15.jar /root/releases-master<br>
+**Note** ( replace “/root" with the value of pwd)
+
 > sudo cd releases-master<br>
 > sudo dir<br>
 
@@ -94,7 +96,7 @@ Press **Insert button** to enable typing and vi editor<br>
 
 **Note:** if something went wrong during typing or don't wanna to save it just press escape and type **:qa!** to exit and use last command **sudo vi mainnet.conf** again)
 
-**Step 5:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) in your Windows PC or Laptop and save your Encoded backup seed to use in mainnet.conf
+**Step 5:** Download the [KSS Desktop Wallet](https://github.com/Krosscoin/DesktopWallet/archive/main.zip) in your Windows PC or Laptop or go to https://webwallet.krosscoin.io and save your Encoded backup seed to use in mainnet.conf
 
 **Step 6:** Change the below lines in mainnet.conf and save it<br>
 a) <code>node-name = "Type Your Node Name Here"</code><br>
