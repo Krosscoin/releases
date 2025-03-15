@@ -2,7 +2,7 @@
 ## System and OS Requirements:<br>
 1. Windows 10 and above or Ubuntu 18 VPS in case of Linux
 2. Minimum 2 cores
-3. 2GB RAM
+3. 4GB RAM
 4. 30GB SSD
 2. Java version 8 and above must be installed in your VPS. If your windows VPS doesn't have it download it from [Here](https://www.java.com/en/download/) and set java in your [windows environment](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html).
 ## Installing and configuring a Krosschain Platform full node on Windows VPS<br>
