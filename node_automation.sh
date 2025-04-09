@@ -40,10 +40,10 @@ fi
 
 # Check Java version
 java_version=$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')
-if [[ $java_version < "17" ]]; then
-    echo -e "${GREEN}Warning: Java version $java_version is less than 17.${RESET}. Installing Java Version 17 (openjdk-17-jre,openjdk-17-jdk).${RESET}"
-	sudo apt install openjdk-17-jre
-	sudo apt install openjdk-17-jdk
+if [[ $java_version < "11" ]]; then
+    echo -e "${GREEN}Warning: Java version $java_version is less than 11.${RESET}. Installing Java Version 11 (openjdk-11-jre,openjdk-11-jdk).${RESET}"
+	sudo apt install openjdk-11-jre
+	sudo apt install openjdk-11-jdk
 	sudo apt update
 else
 	echo -e "${GREEN} Java version: $java_version is already Installed.${RESET}"
