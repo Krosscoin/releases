@@ -60,7 +60,7 @@ f) run the file start.bat and node must start downloading the block.<br>
 > sudo apt install openjdk-11-jre <br>
 > sudo apt install openjdk-11-jdk <br>
 > sudo apt update <br>
-> sudo update-alternatives --config java (set option to to java 11)
+> sudo update-alternatives --config java
 
 Once its installed check if you have the latest version.
 > java -version
